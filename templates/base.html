@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @media print, screen and (min-width: 640px) {
+        .button-ulr {
+            margin-bottom: 100px;
+            background-color: ghostwhite;
+        }
+        .youss, .youso {
+            display: inline-block;
+            text-decoration: none;
+        }
+        .youso {
+            margin-left: 100px;
+            font-size: 30px;
+        }
+        .youso:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .youss {
+            position: relative;
+            right: 10px;
+            color: black;
+            font-size: 40px;
+        }
+        .mi:hover {
+            opacity: 0.5;
+        }
+        h2 {
+            margin-top: 50px;
+            border-bottom: 1px solid;
+        }
+        .rogo {
+              position: relative;
+              bottom: 150px;
+            　font-family: 'Noto Sans JP', sans-serif;
+              writing-mode: vertical-rl;
+              font-size: 11px;
+              transform: scaleX(2);
+        }
+        .h, li {
+            text-align: center;
+        }
+        li {
+            list-style: none;
+        }
+        }
+        @media screen and (max-width: 640px) {
+            h2 {
+            margin-top: 50px;
+            border-bottom: 1px solid;
+            }
+        .youss {
+            display: inline-block;
+            text-decoration: none;
+        }
+        .youso:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .youss {
+            position: relative;
+            right: 10px;
+            color: black;
+            font-size: 40px;
+        }
+        .mi:hover {
+            opacity: 0.5;
+        }
+        .rogo {
+              position: relative;
+              bottom: 100px;
+              writing-mode: vertical-rl;
+              font-size: 11px;
+              transform: scaleX(2);
+        }
+        h1, li {
+            text-align: center;
+        }
+        li {
+            list-style: none;
+        }
+        .a {
+            position: relative;
+            right: 0px;
+            font-size: 30px;
+        }
+        .i {
+            position: relative;
+            left: 100px;
+            font-size: 30px;
+
+        }
+        .u {
+            position: relative;
+            right: 150px;
+            top: 30px;
+            font-size: 30px;
+
+        }
+        .e {
+            position: relative;
+            top: 30px;
+            right: 30px;
+            font-size: 18px;
+        }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block header %}
+    {% endblock header %}
+</head>
+<body>
+    <div class="button-ulr">
+    <ul>
+     <a class="youss mi" translate="no" href="{% url 'home' %}"><font face="serif">英コミ対策ツール</font></a>
+     <a translate="no" class="youso a" href="{% url 'use' %}">使い方</a>
+     <a translate="no" class="youso i"  href="{% url 'main' %}">世界</a>
+     <a translate="no" class="youso u" href="{% url 'tech' %}">技術</a>
+     <a translate="no" class="youso e" href="{% url 'sci' %}">サイエンス</a>
+     <a translate="no" class="youso o" href="{% url 'list' %}">掲示板</a>
+    </ul>
+    </div>
+    <h3 class="rogo mi" translate="no"><font face="serif">毎日更新</font></h3>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

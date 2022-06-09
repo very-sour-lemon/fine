@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{% static 'stylest.css' %}">
+{% endblock header %}
+{% block content %}
+<div class="bob">
+<a href="{% url 'create' %}">書き込む</a>
+</div>
+{% for item in object_list %}
+<div class="card">
+<h1 class="meth">{{ item.name }}さん</h1>
+<h1 class="meth tin">{{ item.time | date:'Y/m/d/D H:i' }}</h1>
+<h1>{{ item.text }}</h1>
+</div>
+{% endfor %}
+{% endblock content %}
